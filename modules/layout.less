@@ -1,0 +1,72 @@
+// This is a v-grid.
+
+@import "grid.less";
+
+/**
+ * Show grid.
+ */
+.showGrid(@maxWidth: 1100px) {
+    background: url(../img/grid950x24x30x10-nomargin.png) repeat-y fixed center center;
+    background-size: 100% auto;
+    max-width: @maxWidth;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
+
+.inner-wrap {
+    .container();
+
+    .vgrid & {
+        .showGrid(960px);
+    }
+}
+
+.row {
+    .row();
+}
+
+.site-logo-text {
+    height: 48px !important;
+    .column(3);
+    .clearfix();
+
+}
+
+.navbar2 {
+    .column(12);
+    .clearfix();
+
+}
+
+
+.column(@col, @columns: @columns) {
+    // resten av koden...
+    box-sizing: border-box;
+}
+body > div.wrap-all > div.outer-wrap.outer-wrap-breadcrumb > div > div > div > nav {
+    .column(12);
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article {
+    .column(12);
+}
+
+// p {
+//     .column(12);
+// }
+
+body > div.outer-wrap.outer-wrap-after-main > div > div > div > div > div {
+    padding-right: 12.5px !important;
+}
+
+body > div.outer-wrap.outer-wrap-footer > div > div > div {
+    width: 960px;
+    padding-left: 10px !important;
+}
+
+.footer-column {
+    width: 29.2% !important;
+
+}

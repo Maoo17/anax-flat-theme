@@ -1,0 +1,169 @@
+//LESS-file for horizontal grid
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+
+    .hgrid & {
+        background-image: url(../img/horisontal-grid-24.png);
+
+    }
+}
+body > div.wrap-all > div.outer-wrap.outer-wrap-header > div > div > header > nav {
+    height: @magicNumber * 3;
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-header > div > div > header > nav > div > ul {
+    margin-top: 0;
+    height: 71px !important;
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-header > div > div > header > span > a > span {
+    @height: 22px;
+    .calcMargin(@height);
+    margin-bottom: @margin / 2!important;
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-header > div > div > header > nav > div > ul > li:nth-child(1) > a {
+    padding-top: @magicNumber;
+}
+
+//header-img
+body > div.wrap-all > div.outer-wrap.outer-wrap-flash > div > div > div > img {
+    margin-top: 18px !important;
+}
+
+//first h1
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > h1:nth-child(1) {
+    height: (@magicNumber * 4) - 6;
+}
+
+//first h2
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > h2:nth-child(2) {
+    @height: 49px;
+    .calcMargin(@height);
+    margin-top: @margin / 2 !important;
+}
+
+
+//second h2
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > h2:nth-child(18) {
+    height: @magicNumber * 2 - 6;
+    margin-top: 25px;
+}
+//p-tag before
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > p:nth-child(25) {
+    height: @magicNumber * 2;
+    margin-bottom: (@magicNumber * 2) - 2;
+
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > pre {
+    margin-bottom: 0;
+    height: @magicNumber * 6;
+}
+
+//mini greyish blog
+body > div.wrap-all > div.outer-wrap.outer-wrap-main > div > div > main > article > div > div {
+    height: @magicNumber * 7;
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-header > div > div > header > span {
+    height: @magicNumber;
+}
+
+body > div.wrap-all > div.outer-wrap.outer-wrap-breadcrumb > div > div > div > nav {
+    @height: 49px;
+    .calcMargin(@height);
+    margin-bottom: @margin / 3!important;
+    height: @magicNumber - 3;
+
+}
+
+body > div.outer-wrap.outer-wrap-after-main > div > div > div > div > div {
+    height: 162px !important;
+    margin-top: 62px !important;
+}
+
+
+
+// h1, h2, h3, h4, h5, h6 {
+//     margin-top: @magicNumber;
+//     margin-bottom: @magicNumber;
+// }
+//
+// div.outer-wrap.outer-wrap-breadcrumb {
+//     @height: 18px;
+//     .calcMargin(@height);
+//     padding-top: @margin / 2!important;
+// }
+
+// h1 {
+//     .fontSize(@fontSizeH1);
+//         font-weight: normal;
+//
+//         border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+//         margin-bottom: @magicNumber - @borderSizeH1;
+//
+//
+// }
+//
+// div.column-a h2 {
+//     @height: 2em;
+//     .calcMargin(@height);
+//     padding-top: @margin / 2!important;
+// }
+
+
+
+//
+@fontSizeH1: 3em;
+// @fontSizeH2: 1.875em;
+// @fontSizeH3: 1.375em;
+// @fontSizeH4: 1.25em;
+// @fontSizeH5: 1em;
+// @fontSizeH6: 0.875em;
+//
+// @fontSizeCodeInline:  1.25em;
+// @fontSizeCodeBlock:   1.25em;
+// @lineHeightCodeBlock: 1.6;
+//
+// @fontFamilyCourier:         "Courier New", Courier, monospace;
+// @fontFamilyMonospace:       monospace;
+//
+// // Serif
+// @fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+// @fontFamilyTimes:           Times, 'Times New Roman', serif;
+// @fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+//
+// // Sans-serif
+// @fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+// @fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyArial:           Arial, sans-serif;
+//
+//
+//
+// /**
+//  * Default font-families
+//  */
+@fontFamilyHeadings:  @fontFamilyHelveticaNeue;
+// @fontFamilyBody:      @fontFamilyCalibri;
+// @fontFamilyCode:      @fontFamilyCourier;
+//
+@colorH1BorderBottom: green;
+// @colorH2BorderBottom: #999;
+@borderSizeH1: 3px;
+// @borderSizeH2: 1px;
