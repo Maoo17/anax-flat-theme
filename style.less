@@ -1,21 +1,40 @@
-/** 
+/**
 * Anax Flat theme.
 */
-@import url(modules.less);
+// @import url(modules.less);
+
+@import url(base.less);
 
 
-
-/** --------------------------------------------------------------
- *  Logo images
- */
-.logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -140px;
+body > div > div.outer-wrap.outer-wrap-after-main > div > div > div > div > div {
+    margin: 2.8px;
 }
 
-.site-logo-text-icon {
-    img {
-        vertical-align: bottom;
+
+@media screen and (max-width: 980px) {
+    body > div > div.outer-wrap.outer-wrap-header > div > div > header > nav > div > ul {
+        width: auto;
+        font-size: 10px;
+    }
+    body {
+        background-color: #b64b19;
+    }
+
+    body > div > div.outer-wrap.outer-wrap-footer > div > div > div > div.columns.footer-column-wrapper {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    body > div > div.outer-wrap.outer-wrap-footer > div > div > div > div.columns.footer-column-wrapper {
+        padding-left: 6% !important;
+    }
+
+    body > div > div.outer-wrap.outer-wrap-after-main > div > div > div > div > div {
+        font-size: 10px;
+        padding-left: 0 !important;
+    }
+    body > div > div.outer-wrap.outer-wrap-after-main > div > div > div > div > div > img {
+        width: 50px !important;
+        width: 50px !important;
     }
 }
